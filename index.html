@@ -1,0 +1,311 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FPS Online - O Portal dos Jogos de Tiro</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700;900&family=Rajdhani:wght@400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Barra de Navegação -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <a href="#" class="logo">FPS<span>ONLINE</span></a>
+            <ul class="nav-menu">
+                <li><a href="#inicio">Início</a></li>
+                <li><a href="#jogos">Jogos</a></li>
+                <li><a href="#noticias">Notícias</a></li>
+                <li><a href="#dicas">Dicas</a></li>
+                <li><a href="#contato">Contato</a></li>
+            </ul>
+            <button class="menu-toggle" aria-label="Abrir menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+        </div>
+    </nav>
+
+    <!-- Seção Hero -->
+    <header id="inicio" class="hero">
+        <div class="hero-content">
+            <h1 class="hero-title">DOMINE OS <span>MELHORES</span> JOGOS DE TIRO ONLINE</h1>
+            <p class="hero-subtitle">Descubra os jogos FPS mais populares do mundo, dicas de especialistas e as últimas novidades do cenário competitivo.</p>
+            <div class="hero-buttons">
+                <a href="#jogos" class="btn btn-primary">Explorar Jogos</a>
+                <a href="#dicas" class="btn btn-outline">Ver Dicas</a>
+            </div>
+        </div>
+        <div class="hero-stats">
+            <div class="stat">
+                <h3>100+</h3>
+                <p>Jogos Analisados</p>
+            </div>
+            <div class="stat">
+                <h3>50K</h3>
+                <p>Jogadores Ativos</p>
+            </div>
+            <div class="stat">
+                <h3>24/7</h3>
+                <p>Cobertura Completa</p>
+            </div>
+        </div>
+    </header>
+
+    <!-- Seção de Jogos -->
+    <section id="jogos" class="section">
+        <div class="container">
+            <h2 class="section-title">JOGOS EM <span>DESTAQUE</span></h2>
+            <p class="section-subtitle">Os títulos que dominam o cenário competitivo mundial</p>
+
+            <div class="games-grid">
+                <!-- Card CS2 -->
+                <article class="game-card" data-game="cs2">
+                    <div class="game-image" style="background-image: linear-gradient(135deg, #1a1a2e 0%, #e94560 100%);">
+                        <span class="game-badge">Tático</span>
+                    </div>
+                    <div class="game-info">
+                        <h3>Counter-Strike 2</h3>
+                        <p>O clássico dos FPS táticos. Bombas, economia e precisão em cada rodada.</p>
+                        <div class="game-meta">
+                            <span>🎮 F2P</span>
+                            <span>⭐ 4.9</span>
+                            <span>👥 1.5M+</span>
+                        </div>
+                        <button class="btn btn-card" onclick="openGameModal('cs2')">Saiba Mais</button>
+                    </div>
+                </article>
+
+                <!-- Card Valorant -->
+                <article class="game-card" data-game="valorant">
+                    <div class="game-image" style="background-image: linear-gradient(135deg, #0f3460 0%, #e94560 100%);">
+                        <span class="game-badge">Competitivo</span>
+                    </div>
+                    <div class="game-info">
+                        <h3>Valorant</h3>
+                        <p>Precisão de tiro combinada com habilidades únicas de agentes.</p>
+                        <div class="game-meta">
+                            <span>🎮 F2P</span>
+                            <span>⭐ 4.8</span>
+                            <span>👥 900K+</span>
+                        </div>
+                        <button class="btn btn-card" onclick="openGameModal('valorant')">Saiba Mais</button>
+                    </div>
+                </article>
+
+                <!-- Card Call of Duty -->
+                <article class="game-card" data-game="cod">
+                    <div class="game-image" style="background-image: linear-gradient(135deg, #2d2d2d 0%, #ff6b35 100%);">
+                        <span class="game-badge">Ação</span>
+                    </div>
+                    <div class="game-info">
+                        <h3>Call of Duty</h3>
+                        <p>Ação frenética, multiplayer intenso e o famoso modo Warzone.</p>
+                        <div class="game-meta">
+                            <span>🎮 Pago</span>
+                            <span>⭐ 4.7</span>
+                            <span>👥 2M+</span>
+                        </div>
+                        <button class="btn btn-card" onclick="openGameModal('cod')">Saiba Mais</button>
+                    </div>
+                </article>
+
+                <!-- Card Overwatch -->
+                <article class="game-card" data-game="overwatch">
+                    <div class="game-image" style="background-image: linear-gradient(135deg, #ff9a00 0%, #ffd700 100%);">
+                        <span class="game-badge">Heróis</span>
+                    </div>
+                    <div class="game-info">
+                        <h3>Overwatch 2</h3>
+                        <p>Combate em equipe com heróis únicos e habilidades especiais.</p>
+                        <div class="game-meta">
+                            <span>🎮 F2P</span>
+                            <span>⭐ 4.6</span>
+                            <span>👥 700K+</span>
+                        </div>
+                        <button class="btn btn-card" onclick="openGameModal('overwatch')">Saiba Mais</button>
+                    </div>
+                </article>
+
+                <!-- Card Apex Legends -->
+                <article class="game-card" data-game="apex">
+                    <div class="game-image" style="background-image: linear-gradient(135deg, #c31432 0%, #240b36 100%);">
+                        <span class="game-badge">Battle Royale</span>
+                    </div>
+                    <div class="game-info">
+                        <h3>Apex Legends</h3>
+                        <p>Battle royale veloz com lendas e movimentação fluida.</p>
+                        <div class="game-meta">
+                            <span>🎮 F2P</span>
+                            <span>⭐ 4.8</span>
+                            <span>👥 800K+</span>
+                        </div>
+                        <button class="btn btn-card" onclick="openGameModal('apex')">Saiba Mais</button>
+                    </div>
+                </article>
+
+                <!-- Card Rainbow Six -->
+                <article class="game-card" data-game="r6">
+                    <div class="game-image" style="background-image: linear-gradient(135deg, #141e30 0%, #243b55 100%);">
+                        <span class="game-badge">Estratégia</span>
+                    </div>
+                    <div class="game-info">
+                        <h3>Rainbow Six Siege</h3>
+                        <p>Combate tático 5v5 com destruição de ambiente e estratégia.</p>
+                        <div class="game-meta">
+                            <span>🎮 Pago</span>
+                            <span>⭐ 4.7</span>
+                            <span>👥 600K+</span>
+                        </div>
+                        <button class="btn btn-card" onclick="openGameModal('r6')">Saiba Mais</button>
+                    </div>
+                </article>
+            </div>
+        </div>
+    </section>
+
+    <!-- Seção de Notícias -->
+    <section id="noticias" class="section section-dark">
+        <div class="container">
+            <h2 class="section-title">ÚLTIMAS <span>NOTÍCIAS</span></h2>
+            <p class="section-subtitle">Fique por dentro do que acontece no mundo dos FPS</p>
+
+            <div class="news-grid">
+                <article class="news-card">
+                    <div class="news-date">12 Nov 2026</div>
+                    <h3>CS2 recebe nova atualização com mapa reformulado</h3>
+                    <p>A Valve anunciou mudanças significativas no mapa Dust2, incluindo novas rotas e melhorias visuais.</p>
+                    <a href="https://www.counter-strike.net/news" target="_blank" class="news-link">Ler mais →</a>
+                </article>
+                <article class="news-card">
+                    <div class="news-date">10 Nov 2026</div>
+                    <h3>Valorant anuncia novo agente para a próxima temporada</h3>
+                    <p>A Riot Games revelou teasers do novo agente que promete revolucionar o meta competitivo.</p>
+                    <a href="https://playvalorant.com/pt-br/news/" target="_blank" class="news-link">Ler mais →</a>
+                </article>
+                <article class="news-card">
+                    <div class="news-date">08 Nov 2026</div>
+                    <h3>Campeonato Mundial de FPS acontece em São Paulo</h3>
+                    <p>O maior evento de esports do Brasil reunirá os melhores times do mundo em uma semana de disputas.</p>
+                    <a href="https://www.esports.com.br" target="_blank" class="news-link">Ler mais →</a>
+                </article>
+            </div>
+        </div>
+    </section>
+
+    <!-- Seção de Dicas -->
+    <section id="dicas" class="section">
+        <div class="container">
+            <h2 class="section-title">DICAS DE <span>PRO</span></h2>
+            <p class="section-subtitle">Melhore seu desempenho com estas dicas essenciais</p>
+
+            <div class="tips-grid">
+                <div class="tip-card">
+                    <div class="tip-icon">🎯</div>
+                    <h3>Mire na Cabeça</h3>
+                    <p>Treine sua mira no nível da cabeça dos inimigos. Isso reduz o tempo de reação e aumenta seu dano por segundo.</p>
+                </div>
+                <div class="tip-card">
+                    <div class="tip-icon">🎧</div>
+                    <h3>Use o Áudio</h3>
+                    <p>Passos, recargas e trocas de arma são audíveis. Use fones de ouvido para detectar inimigos antes que eles te vejam.</p>
+                </div>
+                <div class="tip-card">
+                    <div class="tip-icon">⚙️</div>
+                    <h3>Ajuste a Sensibilidade</h3>
+                    <p>Encontre a sensibilidade ideal do mouse. Uma configuração consistente melhora sua precisão em longas distâncias.</p>
+                </div>
+                <div class="tip-card">
+                    <div class="tip-icon">🧠</div>
+                    <h3>Conheça os Mapas</h3>
+                    <p>Estude os mapas: rotas, pontos de emboscada e posições de vantagem. Conhecimento do mapa é metade da vitória.</p>
+                </div>
+                <div class="tip-card">
+                    <div class="tip-icon">🤝</div>
+                    <h3>Comunique-se</h3>
+                    <p>Informações em tempo real sobre posições inimigas são cruciais. Comunique-se de forma clara e objetiva com seu time.</p>
+                </div>
+                <div class="tip-card">
+                    <div class="tip-icon">🏋️</div>
+                    <h3>Pratique Diariamente</h3>
+                    <p>Dedique 30 minutos diários ao treino de mira e reflexos. A consistência supera sessões longas e esporádicas.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Seção de Contato -->
+    <section id="contato" class="section section-dark">
+        <div class="container">
+            <h2 class="section-title">FALE <span>CONOSCO</span></h2>
+            <p class="section-subtitle">Tem alguma sugestão ou quer contribuir com o site?</p>
+
+            <form class="contact-form" id="contactForm">
+                <div class="form-group">
+                    <input type="text" id="nome" placeholder="Seu nome" required>
+                </div>
+                <div class="form-group">
+                    <input type="email" id="email" placeholder="Seu e-mail" required>
+                </div>
+                <div class="form-group">
+                    <textarea id="mensagem" placeholder="Sua mensagem" rows="5" required></textarea>
+                </div>
+                <button type="submit" class="btn btn-primary">Enviar Mensagem</button>
+            </form>
+            <div id="formMessage" class="form-message"></div>
+        </div>
+    </section>
+
+    <!-- Rodapé -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-logo">
+                    <a href="#" class="logo">FPS<span>ONLINE</span></a>
+                    <p>O portal definitivo para fãs de jogos de tiro online.</p>
+                </div>
+                <div class="footer-links">
+                    <h4>Navegação</h4>
+                    <ul>
+                        <li><a href="#inicio">Início</a></li>
+                        <li><a href="#jogos">Jogos</a></li>
+                        <li><a href="#noticias">Notícias</a></li>
+                        <li><a href="#dicas">Dicas</a></li>
+                    </ul>
+                </div>
+                <div class="footer-links">
+                    <h4>Comunidade</h4>
+                    <ul>
+                        <li><a href="#">Discord</a></li>
+                        <li><a href="#">Fórum</a></li>
+                        <li><a href="#">Twitch</a></li>
+                        <li><a href="#">YouTube</a></li>
+                    </ul>
+                </div>
+                <div class="footer-links">
+                    <h4>Contato</h4>
+                    <ul>
+                        <li><a href="mailto:rafaelcastrodeandrade@gmail.com">✉️ rafaelcastrodeandrade@gmail.com</a></li>
+                        <li><a href="https://wa.me/5521993149008" target="_blank">📱 WhatsApp: (21) 99314-9008</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 FPS Online. Todos os direitos reservados a Rafael Castro de Andrade.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Modal de Jogo -->
+    <div id="gameModal" class="modal">
+        <div class="modal-content">
+            <button class="modal-close" onclick="closeGameModal()">&times;</button>
+            <div id="modalBody"></div>
+        </div>
+    </div>
+
+    <script src="js/script.js"></script>
+</body>
+</html>
